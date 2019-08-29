@@ -7,8 +7,19 @@
 	<script type="text/javascript">
 	$(document).ready(function(){
 		let scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
+		
 		scanner.addListener('scan', function (content) {
-        console.log(content);
+                      console.log(content);
+			// let obj = JSON.parse(content);
+			// alert("Account 입력이 됐습니다...!!!" + account );
+			// console.log("obj: ", obj);
+			// let account = obj.account.toString();
+			// let passwd = obj.passwd.toString();
+			
+			// $('#i_address').val(account);
+			// console.log("account: ", account);
+			// console.log("passwd: ", passwd);
+			
 		});
 		
 		Instascan.Camera.getCameras().then(function (cameras) {
@@ -24,9 +35,9 @@
     </script>
   </head>
   <body>
+    <div class='col-md-5'>
     <video id="preview"></video>
-	
-    
-	
+    <h5>송신처  <input id="i_address" size="45" placeholder=""></input> </h5>
+    </div>
   </body>
 </html>
