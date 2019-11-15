@@ -10,6 +10,8 @@
 		
 		scanner.addListener('scan', function (content) {
                       console.log(content);
+			$('#message').text( content );
+			
 			// let obj = JSON.parse(content);
 			// alert("Account 입력이 됐습니다...!!!" + account );
 			// console.log("obj: ", obj);
@@ -39,5 +41,9 @@
     <video id="preview"></video>
     <h5>송신처  <input id="i_address" size="45" placeholder=""></input> </h5>
     </div>
+    <div class="container " role="main">
+	<h4><strong> Message </strong></h4>
+    <div id="message"></div>
+  </div>
   </body>
 </html>
